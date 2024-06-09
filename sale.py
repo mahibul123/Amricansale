@@ -53,6 +53,8 @@ st.info('Dealer by Total Units', icon='📈')
 fig = px.line(filtered_df, x='Date', y='Units Sold', title='Line Chart')
 st.plotly_chart(fig, use_container_width=True)
 
+st.markdown(""" create by mahibul1234@gmail.com""")
+
 st.info('Top-Selling Products by Units Sold', icon="📈")
 top_products = filtered_df.groupby('Product Name')['Units Sold'].sum().reset_index()
 top_products = top_products.sort_values(by='Units Sold', ascending=False).head(10)  # Top 10 products
